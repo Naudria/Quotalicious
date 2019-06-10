@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-
+import listReducer from './listReducer'
 
 const rootReducer = combineReducers({
-  replaceMe: () => 'Hi there'
+  list: listReducer,
 })
 
 export default rootReducer
