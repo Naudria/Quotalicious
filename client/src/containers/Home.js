@@ -13,7 +13,7 @@ const Home = () => {
           <Header/>
         </div>
         
-       <Grid centered columns={6}>
+       <Grid centered columns={3}>
       <Grid.Column>
           <AllLists/>
         </Grid.Column>

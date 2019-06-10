@@ -5,7 +5,7 @@ const HomeHeader = () => {
   return(
     <div>
           <Header as='h2' icon textAlign='center'>
-      <Icon name="quote left circular violet" />
+      <Icon circular color="violet" name="quote left" />
         Quotalicious!
       </Header>
 			<Divider />

@@ -11,3 +11,25 @@ import fetch from 'isomorphic-fetch'
 	    })
 	  }
 	}
+
+	export const setList = id => {
+  console.log(id)
+  let data = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+
+  return dispatch => {
+    fetch (`/api/lists/${id}`, data)
+    .then(response => {
+      return response.json()
+    }).then (list => {
+      return dispatch({
+        type: 'SET_LIST',
+        payload: list
+      })
+    })
+  }
+}

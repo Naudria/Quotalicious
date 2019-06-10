@@ -10,6 +10,10 @@ export default function listReducer(state = initialState, action) {
       return { ...state, loading: true}
     case 'FETCH_LISTS':
       return { ...state, loading: false, allLists: action.payload}
+    case 'RETRIEVING_SELECTED_LIST':
+      return { ...state, loading: true }
+    case 'SET_LIST':
+      return { ...state, currentList: state.allLists.find(list => list.id === action.payload.id) }
     default: return state
   }
 }
