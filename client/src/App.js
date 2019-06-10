@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 
+import Menu from './components/Menu'
 import Home from './containers/Home'
 
 
@@ -11,9 +12,9 @@ import Home from './containers/Home'
         <div>
           <BrowserRouter>
             <React.Fragment>
-              {/*<Route>
+             <Route>
                 <Menu />
-              </Route>*/}
+              </Route>
               <Route exact path="/" component={Home}/>
             </React.Fragment>
           </BrowserRouter>

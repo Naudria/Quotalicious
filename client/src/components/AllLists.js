@@ -10,7 +10,7 @@ class AllLists extends Component {
   }
 
 	render() {
-
+	
     const mapListsForDropdown = this.props.allLists.map((list, index) => {
       return (
       	<div>
@@ -19,7 +19,9 @@ class AllLists extends Component {
         </option>
         </div>
       )
+
     })
+
 
     return (
     	<Select placeholder='Select A List' options={mapListsForDropdown} />

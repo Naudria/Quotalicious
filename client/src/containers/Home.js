@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {connect} from 'react-redux'
+import { Grid } from 'semantic-ui-react'
 import  AllLists  from '../components/AllLists'
 import Header from '../components/Header'
 
@@ -12,9 +13,11 @@ const Home = () => {
           <Header/>
         </div>
         
-        <div className="column">
+       <Grid centered columns={6}>
+      <Grid.Column>
           <AllLists/>
-        </div>
+        </Grid.Column>
+        </Grid>
       </div>
       )
 
