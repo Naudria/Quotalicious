@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
-import { Select, Segment, Header, Grid } from 'semantic-ui-react'
+import { Select, Segment, Header, Grid, Button } from 'semantic-ui-react'
 
 import { fetchLists }  from '../actions/listActions'
 import { setList }  from '../actions/listActions'
@@ -31,14 +31,15 @@ class AllLists extends Component {
       if (this.props.currentList) {
         const chosenlist = this.props.currentList
         return (
+        	<div>
               <Header as='h2' textAlign='center'>{chosenlist.title}
              	 <Header.Subheader>{chosenlist.description}</Header.Subheader>
            	  </Header>  
+           	   <Button fluid color='violet'>View Quotes!</Button>
+           	   </div>
         )
       }
     }
-
-
 
 	    return (
 	    	<div>

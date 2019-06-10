@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_10_143736) do
+ActiveRecord::Schema.define(version: 2019_06_10_224559) do
 
   create_table "favorite_quotes", force: :cascade do |t|
     t.integer "quote_id"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2019_06_10_143736) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
   end
 
   create_table "quotes", force: :cascade do |t|
