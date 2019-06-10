@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { fetchLists }  from '../actions/listActions'
 
 class AllLists extends Component {
 
@@ -7,4 +10,4 @@ class AllLists extends Component {
 		}
 }
 
-export default AllLists 
+export default connect(null, { fetchLists }) ( AllLists);
