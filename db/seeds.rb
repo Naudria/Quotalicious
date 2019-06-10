@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+List.create(title:"Motivational Quotes")
+List.create(title:"Inspire Me!")
+List.create(title:"For When I'm Sad")
