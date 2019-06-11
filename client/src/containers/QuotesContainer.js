@@ -21,7 +21,7 @@ const QuotesContainer = () => {
            
           </Grid.Column>
 
-           <Grid.Column width={4}>
+           <Grid.Column width={6}>
            
             <QuoteDetail />
            
