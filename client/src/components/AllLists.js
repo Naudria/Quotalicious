@@ -39,7 +39,7 @@ class AllLists extends Component {
               <Card.Header as='h2' textAlign='center'>{chosenlist.title}
              	 <Card.Meta content={chosenlist.description} />
            	  </Card.Header>  
-           	   <Button as={Link} to="/all" button fluid color='violet'>Add More Quotes to List!</Button>
+           	   <Button as={Link} to="/all" fluid color='violet'>Add More Quotes to List!</Button>
                </Card.Content>
                  </Card>
             </Card.Group>
@@ -51,7 +51,7 @@ class AllLists extends Component {
 
 	    return (
 	    	<div>
-	    	  <Grid centered columns>
+	    	  <Grid centered >
 				    <Grid.Row>
 				      <Grid.Column width={8}>
 				      <div className="ui centered card">
