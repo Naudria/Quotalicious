@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { Link } from 'react-router-dom';
 import { List, Button, Divider, Label, Icon } from 'semantic-ui-react'
 import  fetchQuotes  from '../actions/quoteActions'
+import { selectQuote }  from '../actions/quoteActions'
 
 class AllQuotes extends Component {
 	componentDidMount() {
@@ -19,7 +20,7 @@ class AllQuotes extends Component {
     				 <List divided verticalAlign='middle'>
 					    <List.Item key={quote.id}>
 					      <List.Content floated='right'>
-					        <Button color="violet">Select Quote</Button>
+					        <Button color="violet" onClick={() => this.props.selectQuote(quote)}>Select Quote</Button>
 					      </List.Content>
 								
 								<List.Content>
@@ -55,6 +56,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
+	selectQuote,
   fetchQuotes
 }, dispatch)
 
