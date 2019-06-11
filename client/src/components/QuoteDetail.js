@@ -29,6 +29,7 @@ class QuoteDetail extends Component {
       				<Item.Content >
       				<Item.Header as='h3'>{this.props.selectedQuote.body} </Item.Header>
       				<Item.Description>{this.props.selectedQuote.author}</Item.Description>
+      				<br />
       				<Item.Extra>
 
       						{this.props.selectedQuote.tags && this.props.selectedQuote.tags.map(tag => {
@@ -39,9 +40,11 @@ class QuoteDetail extends Component {
 					  			}
 
   						</Item.Extra>
+  						<br />
   					<Button onClick={() => this.props.addQuoteToListFavorites(this.props.selectedQuote, this.props.currentList)}>
   					Add to List Faves
   					</Button>
+  					
       				</Item.Content>
       			</Item>
       			</Container>
