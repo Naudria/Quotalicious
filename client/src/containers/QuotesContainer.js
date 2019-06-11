@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AllQuotes from '../components/AllQuotes';
 import Header from '../components/Header'
-
+import { Grid, Divider, Container } from 'semantic-ui-react'
 import {connect} from 'react-redux'
 
 const QuotesContainer = () => {
@@ -11,10 +11,16 @@ const QuotesContainer = () => {
       	<div>
           <Header/>
         </div>
-        <div >
-
+        <Divider />
+          <Container>
+          <Grid columns='equal'>
+          <Grid.Column width={10}>
+           
             <AllQuotes />
-        </div>
+           
+          </Grid.Column>
+          </Grid>
+          </Container>
       </div>
           
            

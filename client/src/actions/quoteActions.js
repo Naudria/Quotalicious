@@ -30,3 +30,12 @@ function getQuotesAsync(quotes){
     payload: quotes
   };
 }
+
+export const selectQuote = (quote) => {
+  return dispatch => {
+    dispatch({
+      type: 'QUOTE_SELECTED',
+      payload: quote
+    })
+  }
+}
