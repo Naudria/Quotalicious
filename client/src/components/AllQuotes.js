@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 import { List, Button, Divider, Label, Icon } from 'semantic-ui-react'
 import  fetchQuotes  from '../actions/quoteActions'
 import { selectQuote }  from '../actions/quoteActions'
-import Modal from '../containers/Modal'
 import history from '../history';
 
 class AllQuotes extends Component {
+  
 	componentDidMount() {
     this.props.fetchQuotes();
 	}

@@ -33,3 +33,23 @@ import fetch from 'isomorphic-fetch'
     })
   }
 }
+
+export const addQuoteToListFavorites = (selectedQuote, list) => {
+  let id = list.id
+  let data = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ quote: selectedQuote })
+  }
+
+  return dispatch => {
+    fetch (`/api/lists/${id}/add_to_favorites`, data)
+      .then(response => response.json())
+      .then(quotes => dispatch({
+        type: 'ADD_TO_FAVORITES',
+        payload: quotes
+      }))
+  }
+}

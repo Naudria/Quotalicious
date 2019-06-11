@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Item, Container, Icon, Label, Button } from 'semantic-ui-react'
+import { bindActionCreators } from 'redux'
 import  { selectQuote }  from '../actions/quoteActions'
+import { addQuoteToListFavorites } from '../actions/listActions'
 import history from '../history';
 
 class QuoteDetail extends Component {
@@ -60,4 +62,9 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, selectQuote)(QuoteDetail)
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+
+  addQuoteToListFavorites
+}, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(QuoteDetail)
