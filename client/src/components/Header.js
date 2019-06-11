@@ -8,7 +8,7 @@ const HomeHeader = () => {
       <Icon circular color="violet" name="quote left" />
         Quotalicious!
       </Header>
-			<Divider />
+
 			</div>
   )
 }

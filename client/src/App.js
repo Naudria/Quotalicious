@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
+// import allLists from './components/AllLists'
 import Menu from './components/Menu'
 import Home from './containers/Home'
 import QuotesContainer from './containers/QuotesContainer'

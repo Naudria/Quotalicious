@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
-import { Select, Segment, Header, Grid, Button } from 'semantic-ui-react'
+import { Link } from 'react-router-dom';
+import { Select, Segment, Header, Grid, Button, Divider } from 'semantic-ui-react'
 
 import { fetchLists }  from '../actions/listActions'
 import { setList }  from '../actions/listActions'
@@ -35,7 +36,7 @@ class AllLists extends Component {
               <Header as='h2' textAlign='center'>{chosenlist.title}
              	 <Header.Subheader>{chosenlist.description}</Header.Subheader>
            	  </Header>  
-           	   <Button fluid color='violet'>View Quotes!</Button>
+           	   <Button as={Link} to="/all" button fluid color='violet'>Add More Quotes to List!</Button>
            	   </div>
         )
       }
@@ -43,9 +44,9 @@ class AllLists extends Component {
 
 	    return (
 	    	<div>
-	    	  <Grid celled>
+	    	  <Grid centered columns>
 				    <Grid.Row>
-				      <Grid.Column width={15}>
+				      <Grid.Column width={8}>
 				      <div className="ui centered card">
 				   			<select onChange={(e) => this.handleChange(e)}>  
 							    <option value="">Select a List</option>
@@ -54,9 +55,9 @@ class AllLists extends Component {
 				 				</div>
 				 				</Grid.Column>
 				    </Grid.Row>
-
+            <Divider />
 		    	 <Grid.Row>
-		      	<Grid.Column width={15}>
+		      	<Grid.Column width={8}>
 		    		<div>{ListInfo()}</div>
 		    		</Grid.Column>
 		    	 </Grid.Row>
