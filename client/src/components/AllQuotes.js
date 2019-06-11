@@ -3,10 +3,28 @@ import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Link } from 'react-router-dom';
 
-class AllQuotes extends Component {
-	render() {
-		return (
+import  fetchQuotes  from '../actions/quoteActions'
 
-		)
+class AllQuotes extends Component {
+	componentDidMount() {
+    this.props.fetchQuotes();
+	}
+
+
+	render() {
+		if (this.props.allQuotes && this.props.currentList) {
+    	return (
+    		<div>Hi</div>
+			)
+		}
 	}
 }
+
+const mapStateToProps = (state) => {
+  return {
+    allQuotes: state.quotes.allQuotes,
+    currentList: state.user.currentList,
+  }
+}
+
+export default connect(mapStateToProps, fetchQuotes)(AllQuotes)
