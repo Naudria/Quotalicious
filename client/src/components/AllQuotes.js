@@ -14,7 +14,14 @@ class AllQuotes extends Component {
 	render() {
 		if (this.props.allQuotes && this.props.currentList) {
     	return (
-    		<div>Hi</div>
+    		<div>
+    			{this.props.allQuotes.map((quote, index) =>
+    				<div key={quote.id}>
+    				<div> {quote.author}
+    				</div>
+    				</div>
+    				)}
+    		</div>
 			)
 		}
 	}
