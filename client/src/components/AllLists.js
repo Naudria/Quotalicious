@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { Link } from 'react-router-dom';
-import { Select, Segment, Header, Grid, Button, Divider } from 'semantic-ui-react'
+import { Select, Segment, Header, Grid, Button, Divider, Card } from 'semantic-ui-react'
 
 import { fetchLists }  from '../actions/listActions'
 import { setList }  from '../actions/listActions'
@@ -33,10 +33,17 @@ class AllLists extends Component {
         const chosenlist = this.props.currentList
         return (
         	<div>
-              <Header as='h2' textAlign='center'>{chosenlist.title}
-             	 <Header.Subheader>{chosenlist.description}</Header.Subheader>
-           	  </Header>  
+            <Card.Group centered>
+            <Card>
+              <Card.Content>
+              <Card.Header as='h2' textAlign='center'>{chosenlist.title}
+             	 <Card.Meta content={chosenlist.description} />
+           	  </Card.Header>  
            	   <Button as={Link} to="/all" button fluid color='violet'>Add More Quotes to List!</Button>
+               </Card.Content>
+                 </Card>
+            </Card.Group>
+
            	   </div>
         )
       }

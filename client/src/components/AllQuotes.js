@@ -23,15 +23,28 @@ class AllQuotes extends Component {
     				)}
     		</div>
 			)
-		}
+		} else {
+      return (
+
+      <div>Nothing</div>
+
+ 
+      )
+
+     
+    }
 	}
 }
 
 const mapStateToProps = (state) => {
   return {
     allQuotes: state.quotes.allQuotes,
-    currentList: state.user.currentList,
+    currentList: state.list.currentList,
   }
 }
 
-export default connect(mapStateToProps, fetchQuotes)(AllQuotes)
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  fetchQuotes
+}, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(AllQuotes)
