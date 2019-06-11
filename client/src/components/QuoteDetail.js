@@ -39,7 +39,9 @@ class QuoteDetail extends Component {
 					  			}
 
   						</Item.Extra>
-  					
+  					<Button onClick={() => this.props.addQuoteToListFavorites(this.props.selectedQuote, this.props.currentList)}>
+  					Add to List Faves
+  					</Button>
       				</Item.Content>
       			</Item>
       			</Container>
