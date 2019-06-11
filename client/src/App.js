@@ -3,9 +3,11 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 // import allLists from './components/AllLists'
 import Menu from './components/Menu'
+import QuoteDetail from './components/QuoteDetail'
 import Home from './containers/Home'
 import QuotesContainer from './containers/QuotesContainer'
 
+import history from './history';
 
   const App = () => {
     return(
@@ -18,6 +20,7 @@ import QuotesContainer from './containers/QuotesContainer'
               </Route>
               <Route exact path="/" component={Home}/>
               <Route exact path="/all" component={QuotesContainer}/>
+               <Route exact path="/quote/show" component={QuoteDetail}/>
             </React.Fragment>
           </BrowserRouter>
         </div>

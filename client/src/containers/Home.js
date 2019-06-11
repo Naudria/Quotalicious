@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { Grid } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 import  AllLists  from '../components/AllLists'
 import Header from '../components/Header'
 
@@ -8,7 +8,7 @@ import Header from '../components/Header'
 const Home = () => {
 
     return (
-      <div>
+      <Container>
         <div>
           <Header/>
         </div>
@@ -16,7 +16,7 @@ const Home = () => {
      
           <AllLists/>
         
-      </div>
+      </Container>
       )
 
 }
