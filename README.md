@@ -1,6 +1,6 @@
 # QUOTALICIOUS
 
-Add your favorite quotes to predetermined lists—-motivational, inspirational, humorous... 
+Add your favorite quotes to predetermined lists—-motivational, inspirational, humorous... Uses the https://favqs.com/ API to list quotes for your perusal. 
 
 # Installation
 
