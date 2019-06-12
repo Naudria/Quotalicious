@@ -3,12 +3,9 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 // import allLists from './components/AllLists'
 import Nav from './components/Menu'
-import QuoteDetail from './components/QuoteDetail'
 import Home from './containers/Home'
 import QuotesContainer from './containers/QuotesContainer'
 import FavoritesContainer from './containers/FavoritesContainer'
-
-import history from './history';
 
   const App = () => {
     return(

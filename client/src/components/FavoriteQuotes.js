@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { removeQuoteFromListFavorites } from '../actions/listActions'
 import { bindActionCreators } from 'redux'
-import { Container, Card, Button, Label, Header, Icon } from 'semantic-ui-react'
+import { Container, Card, Button, Header, Icon } from 'semantic-ui-react'
 import {connect} from 'react-redux'
 
 // Not a actual container component; reusable and presentational
@@ -41,7 +41,7 @@ console.log(this.props)
     )
     }   else {
       return(
-      <div>Nothing</div>
+      <div>You must select a list first!</div>
       )
     } 
  	}

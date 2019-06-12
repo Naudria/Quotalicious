@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Item, Container, Icon, Label, Button, Popup } from 'semantic-ui-react'
+import { Item, Container, Label, Button, Popup } from 'semantic-ui-react'
 import { bindActionCreators } from 'redux'
-import  { selectQuote }  from '../actions/quoteActions'
 import { addQuoteToListFavorites } from '../actions/listActions'
-import history from '../history';
 
 // An actual container component that holds state
 
@@ -33,11 +31,11 @@ class QuoteDetail extends Component {
       				<Item.Header as='h3'>{this.props.selectedQuote.body} </Item.Header>
       				<Item.Description>{this.props.selectedQuote.author}</Item.Description>
       				<br />
-      				<Item.Extra>
+      				<Item.Extra >
 
       						{this.props.selectedQuote.tags && this.props.selectedQuote.tags.map(tag => {
 					  		 			return(
-					  		 			<Label tag size='mini'>{tag}</Label>
+					  		 			<Label tag size='mini' key={this.props.selectedQuote.id}>{tag}</Label>
 					  		 			)
 					  		 		})
 					  			}

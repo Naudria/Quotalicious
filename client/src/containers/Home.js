@@ -1,5 +1,4 @@
 import React from 'react'
-import {connect} from 'react-redux'
 import { Container } from 'semantic-ui-react'
 import  AllLists  from '../components/AllLists'
 import Header from '../components/Header'

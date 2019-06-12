@@ -3,9 +3,8 @@ import AllQuotes from '../components/AllQuotes';
 import QuoteDetail from '../components/QuoteDetail'
 import Header from '../components/Header'
 import { Grid, Divider, Container, Ref, Sticky, Rail } from 'semantic-ui-react'
-import {connect} from 'react-redux'
 
-// An actual container component that holds state
+// Not a actual container component; reusable and presentational
 
 class QuotesContainer extends Component {
   constructor(props) {

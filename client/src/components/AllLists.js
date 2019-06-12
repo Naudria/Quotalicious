@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { Link } from 'react-router-dom';
-import { Select, Segment, Header, Grid, Button, Divider, Card } from 'semantic-ui-react'
+import { Grid, Button, Divider, Card } from 'semantic-ui-react'
 
 import { fetchLists }  from '../actions/listActions'
 import { setList }  from '../actions/listActions'

@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch'
+// import fetch from 'isomorphic-fetch'
 import axios from 'axios';
 
 // INITIALIZATION

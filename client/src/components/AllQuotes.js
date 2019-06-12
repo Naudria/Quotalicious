@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Link } from 'react-router-dom';
 import { List, Button, Divider, Label, Icon, Header } from 'semantic-ui-react'
 import  fetchQuotes  from '../actions/quoteActions'
 import { selectQuote }  from '../actions/quoteActions'
-import history from '../history';
 
 // An actual container component that holds state
 
@@ -27,7 +25,7 @@ class AllQuotes extends Component {
     		</Header.Content>
     		</Header>
     			{this.props.allQuotes.map((quote, index) =>
-    				 <List divided verticalAlign='middle'>
+    				 <List divided verticalAlign='middle' key={quote.id}>
 					    <List.Item key={quote.id}>
 					      <List.Content floated='right'>
 					        <Button color="violet" onClick={() => this.props.selectQuote(quote)}>Select Quote</Button>
