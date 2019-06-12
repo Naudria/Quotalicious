@@ -16,6 +16,8 @@ export default function listReducer(state = initialState, action) {
       return { ...state, currentList: state.allLists.find(list => list.id === action.payload.id) }
     case 'ADD_TO_FAVORITES':
       return { ...state, currentList: {...state.currentList, favorites: action.payload }}
+    case 'REMOVE_FROM_FAVORITES':
+      return { ...state, currentList: {...state.currentList, favorites: action.payload }}
     default: return state
   }
 }
