@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { Menu, Header } from 'semantic-ui-react'
 
-const Menu = () =>
-  <div className="ui pointing menu">
-   <Link className="item" to="/" >Home</Link>
-    <Link className="item" to="/all" >All Quotes</Link>
-    <Link className="item" to="/favorites" >Favorites</Link>
-  </div>
+const Nav = () =>
+  <Menu>
+   	<Link to="/" ><Menu.Item>Home</Menu.Item></Link>
+    <Link to="/all" ><Menu.Item>All Quotes</Menu.Item></Link>
+    <Link to="/favorites" ><Menu.Item>Favorites</Menu.Item></Link>
+     <Menu.Menu position='right'>
+            <Menu.Item><Link to="/" > <Header as='h4'>Quotalicious</Header></Link></Menu.Item>
+     </Menu.Menu>
+  </Menu>
 
-export default Menu
+export default Nav

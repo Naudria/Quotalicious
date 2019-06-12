@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-// import { removeQuoteFromUserFavorites } from '../actions/userActions'
+import { removeQuoteFromListFavorites } from '../actions/listActions'
 import { bindActionCreators } from 'redux'
-import { Container, Card, Button, Label } from 'semantic-ui-react'
+import { Container, Card, Button, Label, Header, Icon } from 'semantic-ui-react'
 import QuoteDetail from '../components/QuoteDetail'
 import {connect} from 'react-redux'
 
@@ -14,7 +14,13 @@ console.log(this.props)
         
         return (
         	<Container>
-        		<Card.Group centered>
+              <Header as='h2'>
+               <Icon name='list alternate' />
+              <Header.Content>
+              You are in Your "{this.props.currentList.title}" List
+              </Header.Content>
+              </Header>
+        		<Card.Group>
         			{this.props.currentList.favorites.map((quote, index) => 
         				<Card key={quote.id}>
         				<Card.Content>
@@ -30,7 +36,7 @@ console.log(this.props)
                   <Card.Description> {quote.body} </Card.Description>
         				</Card.Content>
         				<Card.Content extra>
-        				 	<Button basic color='red'>
+        				 	<Button basic color='red'onClick={() => this.props.removeQuoteFromListFavorites(quote, this.props.currentList)}>
             				Remove quote
           				</Button>
         				</Card.Content>
@@ -53,4 +59,8 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(FavoriteQuotes)
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  removeQuoteFromListFavorites
+}, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(FavoriteQuotes)

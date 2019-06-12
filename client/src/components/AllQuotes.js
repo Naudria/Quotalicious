@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Link } from 'react-router-dom';
-import { List, Button, Divider, Label, Icon } from 'semantic-ui-react'
+import { List, Button, Divider, Label, Icon, Header } from 'semantic-ui-react'
 import  fetchQuotes  from '../actions/quoteActions'
 import { selectQuote }  from '../actions/quoteActions'
 import history from '../history';
@@ -18,6 +18,12 @@ class AllQuotes extends Component {
 		if (this.props.allQuotes && this.props.currentList) {
     	return (
     		<div>
+    		<Header as='h2'>
+    		 <Icon name='list alternate' />
+    		<Header.Content>
+    		You are in Your "{this.props.currentList.title}" List
+    		</Header.Content>
+    		</Header>
     			{this.props.allQuotes.map((quote, index) =>
     				 <List divided verticalAlign='middle'>
 					    <List.Item key={quote.id}>
@@ -35,6 +41,7 @@ class AllQuotes extends Component {
  		   				<Divider />
  		   				</List>
     				)}
+    		}
     		</div>
 			)
 		} else {

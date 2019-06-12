@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Item, Container, Icon, Label, Button } from 'semantic-ui-react'
+import { Item, Container, Icon, Label, Button, Popup } from 'semantic-ui-react'
 import { bindActionCreators } from 'redux'
 import  { selectQuote }  from '../actions/quoteActions'
 import { addQuoteToListFavorites } from '../actions/listActions'
@@ -41,9 +41,12 @@ class QuoteDetail extends Component {
 
   						</Item.Extra>
   						<br />
-  					<Button onClick={() => this.props.addQuoteToListFavorites(this.props.selectedQuote, this.props.currentList)}>
-  					Add to List Faves
-  					</Button>
+            <Popup
+            trigger={<Button basic color='violet' onClick={() => this.props.addQuoteToListFavorites(this.props.selectedQuote, this.props.currentList)} content="Add to Faves"/>}
+            content={`Added!`}
+            on='click'
+            position='top right'
+            />
   					
       				</Item.Content>
       			</Item>
