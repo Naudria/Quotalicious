@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { removeQuoteFromUserFavorites } from '../actions/userActions'
+// import { removeQuoteFromUserFavorites } from '../actions/userActions'
 import { bindActionCreators } from 'redux'
-import { Container, Card } from 'semantic-ui-react'
+import { Container, Card, Button } from 'semantic-ui-react'
 import QuoteDetail from '../components/QuoteDetail'
 import {connect} from 'react-redux'
 
@@ -10,7 +10,7 @@ class FavoriteQuotes extends Component {
   render() {
 console.log(this.props)
 
-  	if (this.props.currentUser) {
+  	if (this.props.currentList) {
         
         return (
         	<Container>
@@ -30,13 +30,17 @@ console.log(this.props)
         		</Card.Group>
         	</Container>
     )
-    }    
+    }   else {
+      return(
+      <div>Nothing</div>
+      )
+    } 
  	}
 }
 
 const mapStateToProps = (state) => {
   return {
-    currentUser: state.user.currentUser,
+    currentList: state.list.currentList,
   }
 }
 

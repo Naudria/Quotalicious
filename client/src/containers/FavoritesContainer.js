@@ -7,11 +7,11 @@ import {connect} from 'react-redux'
 import { Grid, Divider, Container } from 'semantic-ui-react'
 
 const FavoritesContainer = () => {
-
+		return (
     <Container style={{ marginTop: '30px' }}>
                 <Header />
                 <Divider />
-                <Grid columns={3} stackable padded>
+                <Grid >
                     <Grid.Column>
                         <FavoriteQuotes />
                     </Grid.Column>
