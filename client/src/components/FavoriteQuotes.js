@@ -4,8 +4,9 @@ import { bindActionCreators } from 'redux'
 import { Container, Card, Button, Label, Header, Icon } from 'semantic-ui-react'
 import {connect} from 'react-redux'
 
-class FavoriteQuotes extends Component {
+// Not a actual container component; reusable and presentational
 
+class FavoriteQuotes extends Component {
   
   render() {
 console.log(this.props)
@@ -25,9 +26,7 @@ console.log(this.props)
         				<Card key={quote.id}>
         				<Card.Content>
         				  <Card.Header>{quote.author}</Card.Header>
-                  <Card.Meta>
-                    {quote.tags}
-                  </Card.Meta>
+                  
                   <Card.Description> {quote.body} </Card.Description>
         				</Card.Content>
         				<Card.Content extra>

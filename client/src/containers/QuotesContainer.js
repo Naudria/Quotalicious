@@ -5,6 +5,8 @@ import Header from '../components/Header'
 import { Grid, Divider, Container, Ref, Sticky, Rail } from 'semantic-ui-react'
 import {connect} from 'react-redux'
 
+// An actual container component that holds state
+
 class QuotesContainer extends Component {
   constructor(props) {
         super(props);

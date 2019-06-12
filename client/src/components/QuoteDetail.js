@@ -6,6 +6,9 @@ import  { selectQuote }  from '../actions/quoteActions'
 import { addQuoteToListFavorites } from '../actions/listActions'
 import history from '../history';
 
+// An actual container component that holds state
+
+
 class QuoteDetail extends Component {
 
   render() {

@@ -7,6 +7,8 @@ import  fetchQuotes  from '../actions/quoteActions'
 import { selectQuote }  from '../actions/quoteActions'
 import history from '../history';
 
+// An actual container component that holds state
+
 class AllQuotes extends Component {
   
 	componentDidMount() {

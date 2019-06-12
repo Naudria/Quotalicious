@@ -7,6 +7,8 @@ import { Select, Segment, Header, Grid, Button, Divider, Card } from 'semantic-u
 import { fetchLists }  from '../actions/listActions'
 import { setList }  from '../actions/listActions'
 
+// An actual container component that holds state
+
 class AllLists extends Component {
 	 componentDidMount() {
     this.props.fetchLists()

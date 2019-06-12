@@ -21,7 +21,6 @@ import history from './history';
               </Route>
               <Route exact path="/" component={Home}/>
               <Route exact path="/all" component={QuotesContainer}/>
-              {/*<Route exact path="/quote/show" component={QuoteDetail}/>*/}
               <Route exact path="/favorites" component={FavoritesContainer}/>
             </React.Fragment>
           </BrowserRouter>

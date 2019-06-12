@@ -6,6 +6,8 @@ import { bindActionCreators } from 'redux'
 import {connect} from 'react-redux'
 import { Grid, Divider, Container } from 'semantic-ui-react'
 
+// Not a actual container component; reusable and presentational
+
 const FavoritesContainer = () => {
 		return (
     <Container style={{ marginTop: '30px' }}>
