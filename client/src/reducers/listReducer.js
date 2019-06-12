@@ -1,7 +1,7 @@
 const initialState = {
   loading: false,
   allLists: [],
-  currentList: null
+  currentList: null,
 }
 
 export default function listReducer(state = initialState, action) {

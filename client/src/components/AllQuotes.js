@@ -41,7 +41,7 @@ class AllQuotes extends Component {
  		   				<Divider />
  		   				</List>
     				)}
-    		}
+    	
     		</div>
 			)
 		} else {

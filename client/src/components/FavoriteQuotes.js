@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { removeQuoteFromListFavorites } from '../actions/listActions'
 import { bindActionCreators } from 'redux'
 import { Container, Card, Button, Label, Header, Icon } from 'semantic-ui-react'
-import QuoteDetail from '../components/QuoteDetail'
 import {connect} from 'react-redux'
 
 class FavoriteQuotes extends Component {
+
   
   render() {
 console.log(this.props)
@@ -26,18 +26,13 @@ console.log(this.props)
         				<Card.Content>
         				  <Card.Header>{quote.author}</Card.Header>
                   <Card.Meta>
-                    {this.props.currentList.favorites.tags && this.props.currentList.favorites.tags.map(tag => {
-                      return(
-                      <Label tag size='mini'>{tag}</Label>
-                      )
-                    })
-                  }
+                    {quote.tags}
                   </Card.Meta>
                   <Card.Description> {quote.body} </Card.Description>
         				</Card.Content>
         				<Card.Content extra>
         				 	<Button basic color='red'onClick={() => this.props.removeQuoteFromListFavorites(quote, this.props.currentList)}>
-            				Remove quote
+            				Remove Quote
           				</Button>
         				</Card.Content>
         				</Card>
@@ -60,6 +55,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
+
   removeQuoteFromListFavorites
 }, dispatch)
 

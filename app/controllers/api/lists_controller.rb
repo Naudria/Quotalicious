@@ -38,19 +38,18 @@ class Api::ListsController < ApplicationController
 
   def list_params
     params.require(:list).permit(
-      :title
+      :title,
+      :description
     )
   end
 
   def quote_params
     params.require(:quote).permit(
       :author,
-      :body
+      :body,
+      :tags
     )
   end
 
-  # def current_list
-  #   current_list = List.find(params[:id])
-  # end
 
 end
