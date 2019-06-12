@@ -1,24 +1,20 @@
-# README
+# QUOTALICIOUS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Add your favorite quotes to predetermined lists—-motivational, inspirational, humorous... 
 
-Things you may want to cover:
+# Installation
 
-* Ruby version
+Use the following terminal commands to get up and running!
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<pre>
+  <code>
+    git clone https://github.com/Naudria/Quotalicious.git
+    cd Quotalicious
+    cd client
+    npm install
+    bundle install
+    rake db:migrate
+    rake db:seed
+    rake start
+  </code>
+<pre>
