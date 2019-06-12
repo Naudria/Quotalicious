@@ -53,3 +53,23 @@ export const addQuoteToListFavorites = (selectedQuote, list) => {
       }))
   }
 }
+
+export const removeQuoteFromListFavorites = (selectedQuote, list) => {
+  let id = list.id
+  let data = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ quote: selectedQuote })
+  }
+
+  return dispatch => {
+    fetch (`/api/lists/${id}/remove_from_favorites`, data)
+      .then(response => response.json())
+      .then(quotes => dispatch({
+        type: 'REMOVE_FROM_FAVORITES',
+        payload: quotes
+      }))
+  }
+}

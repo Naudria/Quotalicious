@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import { removeQuoteFromUserFavorites } from '../actions/userActions'
 import { bindActionCreators } from 'redux'
-import { Container, Card, Button } from 'semantic-ui-react'
+import { Container, Card, Button, Label } from 'semantic-ui-react'
 import QuoteDetail from '../components/QuoteDetail'
 import {connect} from 'react-redux'
 
@@ -18,7 +18,16 @@ console.log(this.props)
         			{this.props.currentList.favorites.map((quote, index) => 
         				<Card key={quote.id}>
         				<Card.Content>
-        				{quote.author}
+        				  <Card.Header>{quote.author}</Card.Header>
+                  <Card.Meta>
+                    {this.props.currentList.favorites.tags && this.props.currentList.favorites.tags.map(tag => {
+                      return(
+                      <Label tag size='mini'>{tag}</Label>
+                      )
+                    })
+                  }
+                  </Card.Meta>
+                  <Card.Description> {quote.body} </Card.Description>
         				</Card.Content>
         				<Card.Content extra>
         				 	<Button basic color='red'>
