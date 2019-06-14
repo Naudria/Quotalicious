@@ -1,4 +1,24 @@
 import fetch from 'isomorphic-fetch'
+// import axios from 'axios';
+import history from '../history';
+import  AllLists  from '../components/AllLists'
+
+// export const createList = formValues => async (dispatch, getState) => {
+//   const response = await AllLists.post('/api/lists', {...formValues })
+
+//   dispatch({ type: 'CREATE_LIST', payload: response.data })
+// }
+
+export const createList = formValues => {
+  return (dispatch) => {
+    return fetch('/api/lists', {...formValues })
+    .then(response => {
+        return response.json()
+      }).then(list => {
+        return dispatch({ type: 'CREATE_LIST', payload: list })
+      })
+  }
+}
 
 	export const fetchLists = () => {
 	  return (dispatch) => {

@@ -8,6 +8,8 @@ export default function listReducer(state = initialState, action) {
   switch(action.type) {
     case 'LOADING_LISTS':
       return { ...state, loading: true}
+    case 'CREATE_LIST':
+      return { ...state, [action.payload.id]: action.payload };
     case 'FETCH_LISTS':
       return { ...state, loading: false, allLists: action.payload}
     case 'RETRIEVING_SELECTED_LIST':
