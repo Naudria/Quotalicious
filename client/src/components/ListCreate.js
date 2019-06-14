@@ -1,28 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Container, Header } from 'semantic-ui-react'
 import { createList } from '../actions/listActions'
-import { Field, reduxForm } from 'redux-form';
-// import ListForm from './ListForm';
+import ListForm from './ListForm';
 
 class ListCreate extends Component {
 
-	// onSubmit = formValues => {
-	// 	this.props.createList(formValues);
-	// }
+	onSubmit = formValues => {
+		this.props.createList(formValues);
+	}
 
 	render () {
 		return (
-			<div>
-			<h3>Create a List</h3>
-			{/*<ListForm onSubmit={this.onSubmit} />*/}
-			</div>
+			<Container>
+			<Header>Create a List</Header>
+			<ListForm onSubmit={this.onSubmit} />
+			</Container>
 			);
 	}
 }
 
-export default reduxForm({
-	form: 'list',
 
-})(ListCreate);
-
-// export default connect(null, { createList })(ListCreate);
+export default connect(null, { createList })(ListCreate);

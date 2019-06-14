@@ -9,17 +9,24 @@ import  AllLists  from '../components/AllLists'
 //   dispatch({ type: 'CREATE_LIST', payload: response.data })
 // }
 
-export const createList = formValues => {
-  return (dispatch) => {
-    return fetch('/api/lists', {...formValues })
-    .then(response => {
-        return response.json()
-      }).then(list => {
-        return dispatch({ type: 'CREATE_LIST', payload: list })
-      })
+export const createList = (formValues) => {
+  let data = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ list: formValues })
+  }
+
+  return dispatch => {
+    fetch (`/api/lists`, data)
+      .then(response => response.json())
+      .then(list => dispatch({
+        type: 'CREATE_LIST',
+        payload: list
+      }))
   }
 }
-
 	export const fetchLists = () => {
 	  return (dispatch) => {
 	    dispatch({ type: 'LOADING_LISTS' })

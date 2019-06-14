@@ -6,7 +6,7 @@ import { reducer as formReducer } from 'redux-form';
 const rootReducer = combineReducers({
   list: listReducer,
   quotes: quoteReducer,
-  form: formReducer,
+  form: formReducer
 
 })
 
