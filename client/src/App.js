@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
-// import allLists from './components/AllLists'
+import history from './history';
+import AllLists from './components/AllLists'
 import Nav from './components/Menu'
 import Home from './containers/Home'
 import ListCreate from './components/ListCreate'
-import ListDelete from './components/ListDelete'
+// import ListDelete from './components/ListDelete'
 import QuotesContainer from './containers/QuotesContainer'
 import FavoritesContainer from './containers/FavoritesContainer'
 
@@ -14,7 +15,7 @@ import FavoritesContainer from './containers/FavoritesContainer'
     return(
       <div>
         <div>
-          <BrowserRouter>
+          <Router history={history}>
             <React.Fragment>
              <Route>
                 <Nav />
@@ -22,11 +23,12 @@ import FavoritesContainer from './containers/FavoritesContainer'
               <Switch>
               <Route exact path="/" component={Home}/>
                <Route path="/new" exact component={ListCreate} />
+                <Route path="/" exact component={AllLists} />
               <Route exact path="/all" component={QuotesContainer}/>
               <Route exact path="/favorites" component={FavoritesContainer}/>
               </Switch>
             </React.Fragment>
-          </BrowserRouter>
+          </Router>
         </div>
       </div>
     )

@@ -22,6 +22,7 @@ export const createList = (formValues) => {
         type: 'CREATE_LIST',
         payload: list
       }))
+      .then(history.push('/'))
   }
 
 }
