@@ -33,12 +33,12 @@ class ListForm extends React.Component {
     render(){   
         return (
             <Container>
-            <form className="ui form error" 
+            <Form
             onSubmit={this.props.handleSubmit(this.onSubmit)}>
                 <Field name="title" component={this.renderInput} label="Enter title: " />
                 <Field name="description" component={this.renderInput} label="Enter descripiton: " />
                 <Button color="violet">Submit</Button>
-            </form>
+            </Form>
             </Container>
         );
     }
