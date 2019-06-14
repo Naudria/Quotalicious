@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 const initialState = {
   loading: false,
   allLists: [],
@@ -12,6 +14,8 @@ export default function listReducer(state = initialState, action) {
       return { ...state, list: action.payload };
     case 'FETCH_LISTS':
       return { ...state, loading: false, allLists: action.payload}
+      case 'DELETE_LIST':
+      return {...state, currentList: state.allLists.filter(list => list.id !== action.payload.id), loading: false }
     case 'RETRIEVING_SELECTED_LIST':
       return { ...state, loading: true }
     case 'SET_LIST':

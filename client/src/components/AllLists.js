@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { Link } from 'react-router-dom';
 import { Grid, Button, Divider, Card } from 'semantic-ui-react'
-
+import { deleteList } from '../actions/listActions';
 import { fetchLists }  from '../actions/listActions'
 import { setList }  from '../actions/listActions'
 
@@ -42,6 +42,8 @@ class AllLists extends Component {
              	 <Card.Meta content={chosenlist.description} />
            	  </Card.Header>  
            	   <Button as={Link} to="/all" fluid color='violet'>Add More Quotes to List!</Button>
+                <button className="ui button negative"
+                onClick={() => this.props.deleteList(chosenlist)}>Delete</button>
                </Card.Content>
                  </Card>
             </Card.Group>
@@ -85,6 +87,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
+  deleteList,
   fetchLists,
   setList
 }, dispatch)

@@ -5,6 +5,7 @@ import 'semantic-ui-css/semantic.min.css';
 import Nav from './components/Menu'
 import Home from './containers/Home'
 import ListCreate from './components/ListCreate'
+import ListDelete from './components/ListDelete'
 import QuotesContainer from './containers/QuotesContainer'
 import FavoritesContainer from './containers/FavoritesContainer'
 

@@ -1,13 +1,10 @@
 import fetch from 'isomorphic-fetch'
+
 // import axios from 'axios';
 import history from '../history';
 import  AllLists  from '../components/AllLists'
 
-// export const createList = formValues => async (dispatch, getState) => {
-//   const response = await AllLists.post('/api/lists', {...formValues })
 
-//   dispatch({ type: 'CREATE_LIST', payload: response.data })
-// }
 
 export const createList = (formValues) => {
   let data = {
@@ -26,6 +23,7 @@ export const createList = (formValues) => {
         payload: list
       }))
   }
+
 }
 	export const fetchLists = () => {
 	  return (dispatch) => {
@@ -60,6 +58,21 @@ export const createList = (formValues) => {
     })
   }
 }
+
+export const deleteList = list => {
+
+
+  return dispatch => {
+    fetch ('/api/lists/' + list.id, {
+            method: "DELETE",
+            headers: {
+            'Content-Type': 'application/json'
+        }
+      })
+      .then(response => dispatch({ type: 'DELETE_LIST', payload: list }));
+    }
+
+};
 
 export const addQuoteToListFavorites = (selectedQuote, list) => {
   let id = list.id
