@@ -41,9 +41,13 @@ class AllLists extends Component {
               <Card.Header as='h2' textAlign='center'>{chosenlist.title}
              	 <Card.Meta content={chosenlist.description} />
            	  </Card.Header>  
-           	   <Button as={Link} to="/all" fluid color='violet'>Add More Quotes to List!</Button>
-                <button className="ui button negative"
-                onClick={() => this.props.deleteList(chosenlist)}>Delete</button>
+               <Card.Content extra>
+                <div className='ui two buttons'>
+           	   <Button as={Link} to="/all" basic color='violet'>Add More Quotes to List!</Button>
+                <Button basic color="red"
+                onClick={() => this.props.deleteList(chosenlist)}>Delete</Button>
+                </div>
+                </Card.Content>
                </Card.Content>
                  </Card>
             </Card.Group>
