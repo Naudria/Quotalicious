@@ -15,7 +15,7 @@ class AllLists extends Component {
   }
 
     handleChange(event) {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     this.props.setList(event.target.value)
   }
 
@@ -30,7 +30,7 @@ class AllLists extends Component {
     })
 
     const ListInfo = () => {
-      console.log(this.props.currentList)
+      // console.log(this.props.currentList)
       if (this.props.currentList) {
         const chosenlist = this.props.currentList
         return (

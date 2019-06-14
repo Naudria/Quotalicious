@@ -12,6 +12,34 @@ const requestConfig = {
     }
 };
 
+export const fetchQuoteOfTheDay = () => async dispatch => {
+  const response = await axios.get(`${API_BASE_URL}/qotd`, requestConfig)
+
+  dispatch({
+    type:'FETCH_QUOTE_OF_THE_DAY',
+    payload: response.data.quote
+  })
+}
+
+// export function fetchQuoteOfTheDay(quote) {
+//     return (dispatch) => {
+//         axios.get(`${API_BASE_URL}/qotd`, requestConfig)
+//             .then(response => {
+//               const quote = response.data
+//               return quote
+//            })
+//           dispatch(getQuoteOfTheDayAsync(quote))
+
+//   }
+// }
+
+// function getQuoteOfTheDayAsync(quote){
+//   return {
+//     type: 'FETCH_QUOTE_OF_THE_DAY',
+//     payload: quote
+//   }
+// }
+
 export default function fetchQuotes() {
   return (dispatch) => {
     axios.get(`${API_BASE_URL}/quotes`, requestConfig)
