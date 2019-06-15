@@ -12,7 +12,7 @@ class QuoteOfTheDay extends Component {
   //   super(props)
   //   this.state = { quoteOfDay: true }
   // }
-  
+
   componentDidMount() {
     this.props.fetchQuoteOfTheDay();
 
@@ -20,26 +20,26 @@ class QuoteOfTheDay extends Component {
 
   render() {
     const renderQuoteOfDay = () => {
-         if (this.props.quoteOfDay) {
-          return (
-          	<Container textAlign='center'>
-          	<Header as='h2'>
-    "{this.props.quoteOfDay.body}"
-<Header.Subheader>{this.props.quoteOfDay.author}</Header.Subheader>
-    </Header>
-      			</Container>
-            )}
-      	} 
+      if (this.props.quoteOfDay) {
         return (
-    <div>{renderQuoteOfDay()}</div>
-    )
+          <Container textAlign='center'>
+            <Header as='h2'>
+              "{this.props.quoteOfDay.body}"
+              <Header.Subheader>{this.props.quoteOfDay.author}</Header.Subheader>
+            </Header>
+          </Container>
+        )}
+    }
+        return (
+          <div>{renderQuoteOfDay()}</div>
+        )
       }
-}
-
-const mapStateToProps = (state) => {
-  return {
-    quoteOfDay: state.quotes.quoteOfDay
   }
+
+  const mapStateToProps = (state) => {
+    return {
+      quoteOfDay: state.quotes.quoteOfDay
+    }
 }
 
 export default connect(mapStateToProps, { fetchQuoteOfTheDay })(QuoteOfTheDay);

@@ -7,7 +7,7 @@ import { Grid, Divider, Container, Ref, Sticky, Rail } from 'semantic-ui-react'
 // Not a actual container component; reusable and presentational
 
 class QuotesContainer extends Component {
-  constructor(props) {
+    constructor(props) {
         super(props);
         this.contextRef = React.createRef();
     }
@@ -17,20 +17,20 @@ class QuotesContainer extends Component {
             <Container style={{ marginTop: '30px' }}>
                 <Header />
                 <Divider />
-                <Grid columns={2} stackable padded>
-                    <Grid.Column width={10}>
-                        <AllQuotes />
-                    </Grid.Column>
-                    <Grid.Column width={1}>
-                        <Ref innerRef={this.contextRef}>
+                    <Grid columns={2} stackable padded>
+                        <Grid.Column width={10}>
+                            <AllQuotes />
+                            </Grid.Column>
+                            <Grid.Column width={1}>
+                            <Ref innerRef={this.contextRef}>
                             <Rail position="right">
-                                <Sticky context={this.contextRef} offset={100}>
-                                    <QuoteDetail />
-                                </Sticky>
+                            <Sticky context={this.contextRef} offset={100}>
+                                <QuoteDetail />
+                            </Sticky>
                             </Rail>
-                        </Ref>
-                    </Grid.Column>
-                </Grid>
+                            </Ref>
+                        </Grid.Column>
+                    </Grid>
             </Container>
         );
     }

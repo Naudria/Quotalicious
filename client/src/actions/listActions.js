@@ -22,7 +22,7 @@ export const createList = (formValues) => {
         type: 'CREATE_LIST',
         payload: list
       }))
-      .then(history.push('/'))
+     
   }
 
 }
@@ -72,7 +72,7 @@ export const deleteList = list => {
       })
       .then(response => dispatch({ type: 'DELETE_LIST', payload: list }));
     }
-
+    history.push('/');
 };
 
 export const addQuoteToListFavorites = (selectedQuote, list) => {

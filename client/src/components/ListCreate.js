@@ -4,6 +4,8 @@ import { Container, Header } from 'semantic-ui-react'
 import { createList } from '../actions/listActions'
 import ListForm from './ListForm';
 
+// Not a actual container component; reusable and presentational
+
 class ListCreate extends Component {
 
 	onSubmit = formValues => {

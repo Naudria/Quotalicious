@@ -9,6 +9,7 @@ import ListCreate from './components/ListCreate'
 // import ListDelete from './components/ListDelete'
 import QuotesContainer from './containers/QuotesContainer'
 import FavoritesContainer from './containers/FavoritesContainer'
+import ListsContainer from './containers/ListsContainer'
 
 
   const App = () => {
@@ -16,18 +17,18 @@ import FavoritesContainer from './containers/FavoritesContainer'
       <div>
         <div>
           <Router history={history}>
-            <React.Fragment>
+     
              <Route>
                 <Nav />
               </Route>
               <Switch>
               <Route exact path="/" component={Home}/>
                <Route path="/new" exact component={ListCreate} />
-                <Route path="/" exact component={AllLists} />
+                <Route path="/lists" exact component={ListsContainer} />
               <Route exact path="/all" component={QuotesContainer}/>
               <Route exact path="/favorites" component={FavoritesContainer}/>
               </Switch>
-            </React.Fragment>
+
           </Router>
         </div>
       </div>
