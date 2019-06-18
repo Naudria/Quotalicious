@@ -7,12 +7,31 @@ class Api::ListsController < ApplicationController
 
   def create
     list = List.create(list_params)
+     if list.save
+      render json: list
+    else
+      render json: { message: list.errors }, status: 400
+    end
   end
 
   def show
     current_list = List.find(params[:id])
     render json: current_list
   end
+
+  def update
+    if @list.update(list_params)
+      render json: @list
+    else
+      render json: { message: @list.errors }, status: 400
+    end
+  end
+
+  def destroy
+        current_list = List.find(params[:id])
+        List.destroy(params[:id])
+  end
+
 
   def favorites
     quotes = current_list.favorites.uniq

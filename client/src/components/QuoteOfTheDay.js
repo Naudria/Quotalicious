@@ -4,8 +4,6 @@ import { Container, Header, Icon } from 'semantic-ui-react'
 import { bindActionCreators } from 'redux'
 import  { fetchQuoteOfTheDay } from '../actions/quoteActions'
 
-// An actual container component that holds state
-
 
 class QuoteOfTheDay extends Component {
   //   constructor(props) {

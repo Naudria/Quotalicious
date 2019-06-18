@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 import { Container, Form, Button, Popup } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import history from '../history';
-// Not a actual container component; reusable and presentational
+
 
 class ListForm extends React.Component {
 

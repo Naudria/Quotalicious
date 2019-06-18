@@ -7,7 +7,6 @@ import { Grid, Button, Divider, Card } from 'semantic-ui-react'
 import { deleteList } from '../actions/listActions';
 import { fetchLists }  from '../actions/listActions'
 import { setList }  from '../actions/listActions'
-import ListDelete from './ListDelete'
 
 // An actual container component that holds state
 
@@ -45,7 +44,7 @@ class AllLists extends Component {
           <div>
             <Card.Group centered>
             <Card fluid>
-              <Card.Content centered>
+              <Card.Content >
                 <Card.Header as='h2' textAlign='center'>{chosenlist.title}
                 <Card.Meta content={chosenlist.description} />
                 </Card.Header>
