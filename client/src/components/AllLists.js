@@ -44,7 +44,11 @@ class AllLists extends Component {
           <div>
             <Card.Group centered>
             <Card fluid>
+<<<<<<< HEAD
               <Card.Content >
+=======
+              <Card.Content>
+>>>>>>> 589aeea49404162346f1675d3c8e9f0fe4d1a0f8
                 <Card.Header as='h2' textAlign='center'>{chosenlist.title}
                 <Card.Meta content={chosenlist.description} />
                 </Card.Header>
