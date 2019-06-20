@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { Container, Card, Button, Header, Icon } from 'semantic-ui-react'
 import {connect} from 'react-redux'
 
-// Not a actual container component; reusable and presentational
+
 
 class FavoriteQuotes extends Component {
 

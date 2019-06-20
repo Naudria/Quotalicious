@@ -24,7 +24,7 @@ class QuoteDetail extends Component {
       if (this.props.selectedQuote) {
         return (
 
-        <Container textAlign='center'>
+        <Container textAlign='center' key={this.props.selectedQuote.id}>
             <Item >
               <Item.Content >
                 <Item.Header as='h3'>{this.props.selectedQuote.body} </Item.Header>
