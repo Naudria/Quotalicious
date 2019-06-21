@@ -21,25 +21,6 @@ export const fetchQuoteOfTheDay = () => async dispatch => {
   })
 }
 
-// export function fetchQuoteOfTheDay(quote) {
-//     return (dispatch) => {
-//         axios.get(`${API_BASE_URL}/qotd`, requestConfig)
-//             .then(response => {
-//               const quote = response.data
-//               return quote
-//            })
-//           dispatch(getQuoteOfTheDayAsync(quote))
-
-//   }
-// }
-
-// function getQuoteOfTheDayAsync(quote){
-//   return {
-//     type: 'FETCH_QUOTE_OF_THE_DAY',
-//     payload: quote
-//   }
-// }
-
 export default function fetchQuotes() {
   return (dispatch) => {
     axios.get(`${API_BASE_URL}/quotes`, requestConfig)

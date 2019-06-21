@@ -5,8 +5,6 @@ import { List, Button, Divider, Label, Icon, Header } from 'semantic-ui-react'
 import  fetchQuotes  from '../actions/quoteActions'
 import { selectQuote }  from '../actions/quoteActions'
 
-// An actual container component that holds state
-
 class AllQuotes extends Component {
 
   componentDidMount() {

@@ -4,7 +4,6 @@ import { Container, Form, Button, Popup } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import history from '../history';
 
-
 class ListForm extends React.Component {
 
     renderError({error, touched}){

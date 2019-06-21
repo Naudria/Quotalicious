@@ -1,5 +1,4 @@
 import fetch from 'isomorphic-fetch'
-
 // import axios from 'axios';
 import history from '../history';
 import  AllLists  from '../components/AllLists'
@@ -14,7 +13,8 @@ export const createList = (formValues) => {
     },
     body: JSON.stringify({ list: formValues })
   }
-
+// Redux-thunk allows us to to write action creators that return an function instead of an action.
+// The function below delays dispatch so the asynchronous action (fetching lists) can complete.
   return dispatch => {
     fetch (`/api/lists`, data)
       .then(response => response.json())

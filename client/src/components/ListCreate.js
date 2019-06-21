@@ -4,8 +4,6 @@ import { Container, Header } from 'semantic-ui-react'
 import { createList } from '../actions/listActions'
 import ListForm from './ListForm';
 
-// Container. Changes state.
-
 class ListCreate extends Component {
 
 	onSubmit = formValues => {

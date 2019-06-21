@@ -6,21 +6,12 @@ import Modal from '../Modal';
 import history from '../history';
 import { Grid, Button, Divider, Card } from 'semantic-ui-react'
 import { deleteList } from '../actions/listActions';
-// import { fetchLists }  from '../actions/listActions'
 import { setList }  from '../actions/listActions'
-
-// Container; changes state
 
 class ListDelete extends Component {
 	componentDidMount(){
 		this.props.setList()
 	}
-
-//  handleChange(event) {
-//  // console.log(event.target.value)
-//  this.props.setList(event.target.value)
-// }
-
 
 	renderActions() {
 		const chosenlist = this.props.currentList
@@ -40,18 +31,18 @@ class ListDelete extends Component {
 	}
 
 	render(){
-	return (
-	<Modal
-	title="Delete List"
-	content={this.renderContent()}
-	actions={this.renderActions()}
-	onDismiss={() => history.push('/')}
-	/>
-	);
+		return (
+			<Modal
+				title="Delete List"
+				content={this.renderContent()}
+				actions={this.renderActions()}
+				onDismiss={() => history.push('/')}
+			/>
+		);
 	}
-	}
+}
 
-	const mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
 	return {
 	currentList: state.list.currentList
 	}
@@ -59,7 +50,6 @@ class ListDelete extends Component {
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
 deleteList,
-// fetchLists,
 setList
 }, dispatch)
 

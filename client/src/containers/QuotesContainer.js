@@ -4,8 +4,6 @@ import QuoteDetail from '../components/QuoteDetail'
 import Header from '../components/Header'
 import { Grid, Divider, Container, Ref, Sticky, Rail } from 'semantic-ui-react'
 
-// Not a actual container component; reusable and presentational
-
 class QuotesContainer extends Component {
     constructor(props) {
         super(props);

@@ -6,10 +6,6 @@ import  { fetchQuoteOfTheDay } from '../actions/quoteActions'
 
 
 class QuoteOfTheDay extends Component {
-  //   constructor(props) {
-  //   super(props)
-  //   this.state = { quoteOfDay: true }
-  // }
 
   componentDidMount() {
     this.props.fetchQuoteOfTheDay();

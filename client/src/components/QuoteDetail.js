@@ -4,21 +4,9 @@ import { Item, Container, Label, Button, Popup } from 'semantic-ui-react'
 import { bindActionCreators } from 'redux'
 import { addQuoteToListFavorites } from '../actions/listActions'
 
-// An actual container component that holds state
-
-
 class QuoteDetail extends Component {
 
   render() {
-
-  // Define the initial state of tags as [] before using map on it.
-  // Same as:
-  // constructor(props) {
-  // super(props)
-  //  this.state = {
-  //   tags: []
-  //   }
-  // }
 
     const renderQuoteDetail = () => {
       if (this.props.selectedQuote) {

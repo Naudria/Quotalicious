@@ -5,8 +5,6 @@ import  QuoteOfTheDay  from '../components/QuoteOfTheDay'
 import Header from '../components/Header'
 import { Link } from 'react-router-dom';
 
-// Not a actual container component; reusable and presentational
-
 const Home = () => {
 
   return (
