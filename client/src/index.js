@@ -15,6 +15,8 @@ const store = createStore(
   composeEnhancer(applyMiddleware(reduxThunk))
 );
 
+
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
