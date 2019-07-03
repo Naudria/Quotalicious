@@ -6,6 +6,7 @@ import  AllLists  from '../components/AllLists'
 
 
 export const createList = (formValues) => {
+  console.log('C');
   let data = {
     method: 'POST',
     headers: {
@@ -18,12 +19,15 @@ export const createList = (formValues) => {
   return dispatch => {
     fetch (`/api/lists`, data)
       .then(response => response.json())
-      .then(list => dispatch({
-        type: 'CREATE_LIST',
-        payload: list
-      }))
+      .then(list => {
+        console.log('D');
+        dispatch({
+              type: 'CREATE_LIST',
+              payload: list
+            })})
      
   }
+  console.log('E');
 
 }
 	export const fetchLists = () => {

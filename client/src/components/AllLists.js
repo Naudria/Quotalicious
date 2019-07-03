@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// the below ensures that the return value from setList flows through all our reducers
 import { bindActionCreators } from 'redux'
 import history from '../history';
 import { Link } from 'react-router-dom';
@@ -93,9 +92,7 @@ class AllLists extends Component {
 
 }
 
-// whatever state is returned (in the form of an object with a key of allLists and a value of state) 
-// in the mapStateToProps function will show up as props
-// inside of AllLists. mapStateToProps is the GLUE between React and Redux.
+
 const mapStateToProps = (state) => {
     return {
       allLists: state.list.allLists,

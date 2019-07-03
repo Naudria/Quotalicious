@@ -29,7 +29,9 @@ class ListForm extends React.Component {
     }
 
     onSubmit = (formValues) => {
-        this.props.onSubmit(formValues);
+        console.log('A');
+        this.props.create(formValues);
+        console.log('B');
         alert('List created')
         history.push('/')
     };

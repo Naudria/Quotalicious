@@ -3,11 +3,11 @@ import { removeQuoteFromListFavorites } from '../actions/listActions'
 import { bindActionCreators } from 'redux'
 import { Container, Card, Button, Header, Icon } from 'semantic-ui-react'
 import {connect} from 'react-redux'
-
-
+import QuoteUpvote from '../components/QuoteUpvote'
 
 class FavoriteQuotes extends Component {
 
+ 
   render() {
     console.log(this.props)
 
@@ -30,9 +30,13 @@ class FavoriteQuotes extends Component {
               <Card.Description> {quote.body} </Card.Description>
               </Card.Content>
               <Card.Content extra>
-              <Button basic color='red'onClick={() => this.props.removeQuoteFromListFavorites(quote, this.props.currentList)}>
+              <Button.Group>
+              <Button onClick={() => this.props.removeQuoteFromListFavorites(quote, this.props.currentList)}>
               Remove Quote
               </Button>
+              <Button.Or />
+              <QuoteUpvote />
+              </Button.Group>
               </Card.Content>
             </Card>
             )}
@@ -46,6 +50,9 @@ class FavoriteQuotes extends Component {
     }
   }
 }
+
+// react doc = thinking in react
+// async - promises
 
 const mapStateToProps = (state) => {
   return {

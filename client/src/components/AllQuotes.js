@@ -23,12 +23,12 @@ class AllQuotes extends Component {
             </Header>
             {this.props.allQuotes.map((quote, index) =>
             <List divided verticalAlign='middle' key={quote.id}>
-              <List.Item key={quote.id}>
+              <List.Item >
                 <List.Content floated='right'>
                 <Button color="violet" onClick={() => this.props.selectQuote(quote)}>Select Quote</Button>
                 </List.Content>
 
-                <List.Content>
+                <List.Content key={quote.id}>
                 <Icon name="quote left" />{quote.body}
                 </List.Content>
                 <List.Content>

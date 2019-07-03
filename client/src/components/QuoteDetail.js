@@ -12,17 +12,17 @@ class QuoteDetail extends Component {
       if (this.props.selectedQuote) {
         return (
 
-        <Container textAlign='center' key={this.props.selectedQuote.id}>
-            <Item >
+        <Container textAlign='center' >
+            <Item key={this.props.selectedQuote.id}>
               <Item.Content >
                 <Item.Header as='h3'>{this.props.selectedQuote.body} </Item.Header>
                 <Item.Description>{this.props.selectedQuote.author}</Item.Description>
                   <br />
-                <Item.Extra >
+                <Item.Extra key={this.props.selectedQuote.id} >
 
                 {this.props.selectedQuote.tags && this.props.selectedQuote.tags.map(tag => {
                 return(
-                <Label tag size='mini' key={this.props.selectedQuote.id}>{tag}</Label>
+                <Label tag size='mini' key={tag.id}>{tag}</Label>
                 )
                 })
             }
