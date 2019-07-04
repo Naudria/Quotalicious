@@ -56,6 +56,8 @@ class AllQuotes extends Component {
     }
 }
 
+// Check
+
 const mapStateToProps = (state) => {
   return {
     allQuotes: state.quotes.allQuotes,
