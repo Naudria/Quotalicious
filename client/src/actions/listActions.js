@@ -30,19 +30,19 @@ export const createList = (formValues) => {
   console.log('E');
 
 }
-	export const fetchLists = () => {
-	  return (dispatch) => {
-	    dispatch({ type: 'LOADING_LISTS' })
-	    return fetch('/api/lists')
-	    .then(response => {
-	      return response.json()
-	    }).then(lists => {
-	      return dispatch({ type: 'FETCH_LISTS', payload: lists })
-	    })
-	  }
-	}
+  export const fetchLists = () => {
+    return (dispatch) => {
+      dispatch({ type: 'LOADING_LISTS' })
+      return fetch('/api/lists')
+      .then(response => {
+        return response.json()
+      }).then(lists => {
+        return dispatch({ type: 'FETCH_LISTS', payload: lists })
+      })
+    }
+  }
 
-	export const setList = id => {
+  export const setList = id => {
   console.log(id)
   let data = {
     method: 'GET',
@@ -118,3 +118,4 @@ export const removeQuoteFromListFavorites = (selectedQuote, list) => {
       }))
   }
 }
+
