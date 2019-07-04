@@ -92,7 +92,7 @@ class AllLists extends Component {
 
 }
 
-
+// Check
 const mapStateToProps = (state) => {
     return {
       allLists: state.list.allLists,
