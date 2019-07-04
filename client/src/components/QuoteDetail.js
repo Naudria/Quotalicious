@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Item, Container, Label, Button, Popup } from 'semantic-ui-react'
+import { Item, Container, Label, Button, Popup, Segment } from 'semantic-ui-react'
 import { bindActionCreators } from 'redux'
 import { addQuoteToListFavorites } from '../actions/listActions'
 
@@ -11,8 +11,8 @@ class QuoteDetail extends Component {
     const renderQuoteDetail = () => {
       if (this.props.selectedQuote) {
         return (
-
-        <Container textAlign='center' >
+          <Segment textAlign='center'>
+        
             <Item key={this.props.selectedQuote.id}>
               <Item.Content >
                 <Item.Header as='h3'>{this.props.selectedQuote.body} </Item.Header>
@@ -38,7 +38,8 @@ class QuoteDetail extends Component {
 
               </Item.Content>
             </Item>
-          </Container>
+       
+          </Segment>
        )
       } else {
         return null

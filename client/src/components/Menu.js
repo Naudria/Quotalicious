@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, Header } from 'semantic-ui-react'
 
 const Nav = () =>
-  <Menu>
+  <Menu stackable>
       <Link to="/" ><Menu.Item>Home</Menu.Item></Link>
       <Link to="/lists" ><Menu.Item>Pick A List</Menu.Item></Link>
       <Link to="/new" ><Menu.Item>Create A List</Menu.Item></Link>

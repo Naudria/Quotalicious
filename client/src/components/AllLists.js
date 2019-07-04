@@ -48,10 +48,10 @@ class AllLists extends Component {
                 <Card.Header as='h2' textAlign='center'>{chosenlist.title}
                 <Card.Meta content={chosenlist.description} />
                 </Card.Header>
-              <Card.Content extra>
-                <Button.Group >
-                <Button as={Link} to="/all" basic color='violet'>Add More Quotes to This List</Button>
-                <Button as={Link} to="/favorites" basic color='green'>View This List Favorites</Button>
+              <Card.Content extra >
+               <Button.Group vertical widths='5'>
+                <Button as={Link} to="/all" basic color='violet'>Add Quotes </Button>
+                <Button as={Link} to="/favorites" basic color='green'>Favorites</Button>
                 <React.Fragment>
                 <Button  basic color="red"
                 onClick={() => this.onClick()} >Delete List</Button>
